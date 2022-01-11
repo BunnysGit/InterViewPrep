@@ -1,0 +1,69 @@
+Questions:
+
+1) what is polymorphism
+2) what is opps concept
+3) what is abstraction in java
+4) what is interface and diff b/t abstract and interface
+5) what is the difference between string buffer and string builder
+6) why string is immutable
+7) what is final,finally and finalize 
+8) difference b/t throw and throws
+9) what is static block in java
+10) difference b/t local and global variabbles
+11) have you used static variables in java
+12) why we will use try catch in java
+13) is finnaly block will be executed after try catch
+14) one condition where finally block will not be executes what is that case
+15) can we make class as final
+16) can we extends the final class
+17)can we extends the interface if no why
+18) can we achive multiple inheritance in java if no why ? ans: due to ambiquity 
+19) can we make interface as final if no why
+20)difference b/w throw and throws
+
+
+--------
+Answers:
+--------
+
+-----------------------------------------------------------------------------------------------------------------------------------------
+
+1. What is polymorphism ??
+
+Poly means many or several.
+morphism means forms
+
+java is OOPS based which means object oriented.
+
+Executing :
+
+multiple methods in more than one forms.
+task implemented in more than one ways.
+
+In Java polymorphism is mainly divided into two types: 
+
+>> Compile-time Polymorphism -- Method Overloading
+A method can have a same name but can also have multiple parameters or functions inside of them this is called method overloading.
+we overload the method with different parameters or functions
+
+
+>> Runtime Polymorphism -- Method overriding
+We use it in POM, Util class, POJO Class -- We use the methods from a different class in one class by extending
+
+- We override a method's function or logic from one parent class to a different child class.
+- Overriding parent class method with the child class method.
+- @Override annotation will be shown in the new method created in the second class or child class.
+- When we run the same method in the child class it will execute child class the method
+ 
+-----------------------------------------------------------------------------------------------------------------------------------------
+
+2. What is OOPS concept:
+
+- OOPs means Object Oriented Programming.
+- it has the following concepts:
+- class, method, object, abstraction, polymorphism, encapsulation, inheritance.
+
+-----------------------------------------------------------------------------------------------------------------------------------------
+
+3.What is Abstraction: 
+

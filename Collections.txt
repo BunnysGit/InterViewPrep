@@ -1,0 +1,133 @@
+====================================================================================================================================================================================
+                                                                                     Collections - Questions
+====================================================================================================================================================================================
+1)	What is list is it interface or class
+2)	What types of lists
+3)	Iteration of list
+4)	What are the properties of list
+5)	List allows duplicates
+6)	When we will use list
+7)	When we use ayyary list when we will use linked list
+8)	What is set
+9)	What are the types in set
+10)	Does set allows duplicates
+11)	Where we will get the order list I mean in the order way ? ans linkedhashset
+12)	When we will use set and when we will use list
+13)	What is the hashmap  and how to iterate 
+14)	How to descending the set in collections? Ans navigableset ns = new Treeset();  ns.descendingset()
+15)	Difference b/w hasp map and hash table
+16)	When we use hashmap and hashtable
+17)	Difference between arraylist and linked list
+18)	Difference between hash set and linked hash set
+19)	Real time use of set and list in framework
+20)	In list which is faster arraylist or likedlist
+21)	Does hashtable allows duplicate values
+22)	Does hashtable allows duplicate keys
+23)	Difference b/w list and set
+24)	What is sorted set and tree set
+25)	What is the diff b/w error and exception
+
+
+====================================================================================================================================================================================
+                                                                                             Answers
+====================================================================================================================================================================================
+
+About Collections:
+
+> Collection is a framework which was introduced in jdk 1.5.
+> it can store multiple values of dissimilar datatype in a single variable.
+> Memory is not fixed and Memory wastage is low due to memory is allocated at run time.
+
+Collections Hierarchy:
+
+There are 3 things comes under collection.
+
+1. List
+2. Set
+3. Queue
+
+====================================================================================================================================================================================
+
+1. What is list ?  is it a class or interface? Properties of List ?
+
+List comes under Collections FrameWork used to store multiple data types in a single list
+List is index based
+List allows duplicates
+List prints in insertion order
+List allows null value which is an empty value. >> unassigned, undefined value is null
+
+====================================================================================================================================================================================
+
+2. Types of list?
+
+There are three types of list in collections framework
+
+1.ArrayList
+2.LinkedList
+3.Vector
+
+All of the these lists types are classes.
+We can create object for them but not the list itself
+
+Syntax:
+
+List v.n = new ArrayList();
+List v.n = new LinkedList();
+List v.n = new Vector();
+
+> Vector v.n = new Vector();
+> LinkedList v.n = new LinkedList();
+> ArrayList v.n = new ArrayList();
+
+Generics: 
+
+Introduced in jdk 1.5
+We use generic to store similar data types in collections.
+we need to specify the data type in <> bracket.
+We need to pass wrapper class of a data type.
+
+ex:
+
+List<Wrapper class> vn = New Array<Wrapper Class>();
+
+
+
+====================================================================================================================================================================================
+3. How to Iteration of list?
+
+We can iterate a list using for loop and foreach loop using the following methods.
+
+*vn.size(); -- To get the size of a list
+*vn.get(); -- To get a particular element from the list
+
+====================================================================================================================================================================================
+
+4. What are the properties of list
+
+====================================================================================================================================================================================
+
+5. Does List Allow Duplicates?
+
+====================================================================================================================================================================================
+6. When We will use List?
+
+====================================================================================================================================================================================
+7. When We use Array List and When we will use linked List
+
+
+
+====================================================================================================================================================================================
+8. What is set?
+
+
+
+====================================================================================================================================================================================
+9. What are the types in set?
+
+
+====================================================================================================================================================================================
+
+10. Does Set Allow Duplicates?
+
+
+====================================================================================================================================================================================

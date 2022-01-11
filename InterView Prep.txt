@@ -1,0 +1,322 @@
+
+----------------------------------------------------------------------------------------------------------------------------------------
+
+1. Diff Types of Locators:
+
+There are 7 types of locators.
+linktext, partial linktext, css selector, id, name, class, xpath, TagName
+
+
+----------------------------------------------------------------------------------------------------------------------------------------
+
+2. types of exception - checked and unchecked exception:
+
+>>> Checked exception:
+
+The exceptions that are checked at compile time are called as checked exception. This needs to be handled using throws keyword.
+It will be forced to handle it by the compiler.
+everything under throwable is checked exceptions.
+
+>>> Unchecked Exception:
+
+The exceptions that are not checked at compile time are called as unchecked exception. in c++ all exceptions are unchecked.
+It will not be forced by the compiler to handle or specify it.
+eg: ArithmeticException
+
+
+----------------------------------------------------------------------------------------------------------------------------------------
+
+3. Write a CSS selector:
+
+example: input[id='firstName']
+
+There are 5 types of CSS Selectors
+
+ID -  “css=input#Email”
+Class
+Attribute
+Sub-String
+Inner String
+
+----------------------------------------------------------------------------------------------------------------------------------------
+
+4. Getting a text from a webtable in selenium: 
+
+>> In HTML, table is created using <table> tag. Web table is a HTML structure for creating rows and columns on a Web page.
+
+There are two types of webtables in selenium.
+
+1.Static webtables -- Data is static -- Nos of rows and columns are fixed
+2.Dynamic webtables -- Data is dynamic -- Nos of rows and columns are not fixed
+
+A web table can consists below parts:
+
+Header(s): It is created using <th> tag.
+Row(s):It is created using <tr> tag.
+Columns(s):It is created using <td> tag.
+
+We need to use getText() method for printing a particular
+
+----------------------------------------------------------------------------------------------------------------------------------------
+
+5.Why xpath is used even though css selector is fast why we will use of xpath
+
+> XPath allows you to navigate up the DOM when looking for elements to test or scrape.
+> It’s compatible with old browsers (or it was at time of publishing—including older versions of Internet Explorer, which some corporations still use).
+> Creating an XPath is more flexible than a CSS Selector.
+> When you don’t know the name of an element, you can use contains to search for possible matches.
+
+----------------------------------------------------------------------------------------------------------------------------------------
+
+6. Annotations in TestNg:
+
+There are 10 methods in TestNg
+
+> @BeforeMethod: This will be executed before every @test annotated method.
+> @AfterMethod: This will be executed after every @test annotated method.
+> @BeforeClass: This will be executed before first @Test method execution. It will be executed one only time throughout the test case.
+> @AfterClass: This will be executed after all test methods in the current class have been run
+> @BeforeTest: This will be executed before the first @Test annotated method. It can be executed multiple times before the test case.
+> @AfterTest: A method with this annotation will be executed when all @Test annotated methods complete the execution of those classes inside the <test> tag in the TestNG.xml file.
+> @BeforeSuite: It will run only once, before all tests in the suite are executed.
+> @AfterSuite: A method with this annotation will run once after the execution of all tests in the suite is complete.
+> @BeforeGroups: This method will run before the first test run of that specific group.
+> @AfterGroups: This method will run after all test methods of that group complete their execution.
+ 
+
+----------------------------------------------------------------------------------------------------------------------------------------
+
+7. How to deal with popups or alerts:
+
+An Alert is a small message box which appears on screen to show some information to the user.
+
+There are 3 types of alerts in selenium:
+
+> simple alert - will display information or warning message on the screen.
+> confirmation alert - will ask for a permission from the user to do perform an operation.
+> prompt alert - Will ask an input from the user to perfrom an operation
+
+we can switch selenium's view to a pop using the below code:
+
+driver.switchTo().alert().dismiss(); -- This will cancel the alert
+driver.switchTo().alert().sendKeys("Text"); -- This will pass text to the alert
+driver.switchTo().alert().getText(); -- This method will fetch the text shown in the alert
+driver.switchTo().alert().accept(); ---- This method will accept the alert
+
+----------------------------------------------------------------------------------------------------------------------------------------
+
+8. What is the return type of getwindowHandles & getwindowHandle
+
+> getwindowHandle() returns the window handle of focused browser window/tab.
+> getWindowHandles() returns all the windowhandles of all the tabs opened by the driver including the child and parent window.
+
+> getWindowHandles() - return type is set<String> (Set of string)
+> getWindowHandle() - return type is string.
+
+> getWindowHandles() internally uses LinkedHashSet. So whatever Set it returns, it will give window handles in order it is opened.
+
+
+>In chrome and Firefox , Each tab in a window will have unique window handles.
+>As soon as you launch a browser window, it gets its window handle. It is not mandatory to load a URL in to it.
+>If you close browser and then call getWidnowHandle() or getWindowHandles() on driver, you will get NoSuchSessionException
+
+----------------------------------------------------------------------------------------------------------------------------------------
+
+9. What is the return type of findelement & findelements:
+
+findElement: A command used to uniquely identify a web element within the web page.
+findElements: A command used to identify a list of web elements within the web page.
+
+Return type:
+
+findElement - WebElement
+findElements - List of WebElements
+
+----------------------------------------------------------------------------------------------------------------------------------------
+
+10. Differences between findElement & findElements
+
+findElement:
+
+** Returns the first matching web element if multiple web elements are discovered by the locator	
+** Throws NoSuchElementException if the element is not found
+** Detects a unique web element
+** Return type: WebElement
+
+findElements:
+
+** Returns a list of multiple matching web elements
+** Returns an empty list if no matching element is found
+** Returns a collection of matching elements
+** Return type: List of WebElements
+
+----------------------------------------------------------------------------------------------------------------------------------------
+
+11. How to handle multiple windows:
+
+>> We can handle multiple windows through window handlers and javascript executors.
+** WindowHandle = It is an unique identifier that holds the address of a tab/window in a browser.
+
+Methods used to handle windows:
+
+** get.windowhandle(): This method helps to get the window handle of the current window
+
+** get.windowhandles(): This method helps to get the handles of all the windows opened
+
+** set: This method helps to set the window handles in the form of a string. set<string> set= driver.get.windowhandles()
+
+** switch to: This method helps to switch between the windows
+
+** action: This method helps to perform certain actions on the windows
+
+----------------------------------------------------------------------------------------------------------------------------------------
+
+12. How to select a dropdown without using the select tag & 
+
+>> We can select a particular value in a dropdown using the method of Select class by using findElements() method.
+
+***** Select Class:
+
+>> In Selenium, It defined a class Select which is used to select the dropdown value and implement the HTML SELECT tag . 
+>> When we inspect the dropdown then we can see the Select tag in html view.
+
+**** Select class methods:
+
+1.selectByVisibleText() – Select the value based on visibility of the text.
+2. selectByValue() –  Select the option based on selecting  html value.
+3. selectByIndex() – Select the option based on given index.  Example – If you want to select first option from dropdown then index will be 0. Same like for second option index will be 1 etc.
+4. isMultiple() – It return true or false if drop down allow multiple selections at a time
+5. deselectAll() – It deselect all selected options.
+
+*** Methods that are used in selenium to deselect a dropdown:
+
+deselectByVisibleText(), 
+deselectByValue() 
+deselectByIndex() 
+
+----------------------------------------------------------------------------------------------------------------------------------------
+
+13. how to pass a text into a textbox without using sendkeys() method:
+
+> We can input text in the text box without the method sendKeys with thehelp of the JavaScript Executor. 
+> Selenium executes JavaScript commands with the help of the executeScript method.
+> The JavaScript command to be run is passed as parameter to the method. 
+
+Syntax:
+
+JavascriptExecutor j = (JavascriptExecutor)driver;
+j.executeScript ("document.getElementById('gsc-i-id1').value='Selenium'");
+
+code:
+
+public class JsEnterText{
+
+   public static void main(String[] args) {
+
+      System.setProperty("webdriver.gecko.driver","C:\\Users\\ghs6kor\\Desktop\\Java\\geckodriver.exe");
+
+      WebDriver driver = new FirefoxDriver();
+
+      //implicit wait
+      driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+
+      //URL launch
+      driver.get("https://www.tutorialspoint.com/index.htm");
+
+      // JavaScript Executor to enter text
+      JavascriptExecutor j = (JavascriptExecutor)driver;
+      j.executeScript ("document.getElementById('gsc-i-id1').value='Selenium'");
+
+      WebElement l = driver.findElement(By.id("gsc-i-id1"));
+
+      String s = l.getAttribute("value");
+      System.out.println("Value entered is: " + s);
+
+      driver.quit();
+   }
+}
+
+----------------------------------------------------------------------------------------------------------------------------------------
+
+14. Types of Exceptions in selenium:
+
+These are the mostly seen exceptions in selenium.
+
+> NoSuchElementException
+> NoSuchWindowException
+> NoSuchFrameException
+> NoAlertPresentException
+> InvalidSelectorException
+> ElementNotVisibleException
+> ElementNotSelectableException
+> TimeoutException
+> NoSuchSessionException
+> StaleElementReferenceException.
+
+----------------------------------------------------------------------------------------------------------------------------------------
+
+15.What is stalElementReferenceException: 
+
+> Stale Element means an old element or no longer available element. 
+> Assume there is an element that is found on a web page referenced as a WebElement in WebDriver. 
+> If the DOM changes then the WebElement goes stale. If we try to interact with an element which is staled then the StaleElementReferenceException is thrown.
+
+---------------------------------------------------------------------------------------------------------------------------------------
+
+16. What is synchronization in selenium & waits in selenium:
+
+Selenium Synchronization is a mechanism which involves more than one components to work parallel with Each other.
+
+In test automation we've two things 
+
+1.Application under test
+2.Test Automation Tool
+
+Both these two things will have their own speed. We should design our test scripts in a such way that both the components are running at the same speed.
+So that we can avoid things like "NoSuchElementException".
+
+
+Selenium Synchronization has two categories.
+
+1.Unconditional - making the tool wait until certain amount of time
+
+**We just specify timeout value only
+**Examples: Wait() and Thread.Sleep();
+
+2.Conditional Synchronization -- Making the tool wait until certain amount of time along with a condition 
+
+** We specify a condition along with timeout value.
+** It is very important to set the timeout value in conditional synchronization.
+** because the tool should proceed further instead of making the tool to wait for a particular condition to satisfy.
+
+
+---------------------------------------------------------------------------------------------------------------------------------------
+
+17. Right click on one element:
+
+There are many ways to do it
+
+We can use the following methods in selenium to perform a right
+
+1. Using Robot Class
+2. Using Actions Class
+
+** Right Click operation is also called Context Click in Selenium
+** Pre-defined method context click provided by Actions class is used to perform right click operation.
+
+Actions actions = new Actions(driver);
+WebElement elementLocator = driver.findElement(By.id("ID"));
+actions.contextClick(elementLocator).perform();
+
+---------------------------------------------------------------------------------------------------------------------------------------
+
+18. What is the Difference between build() and perform() :
+
+** build() method in Actions class is use to create chain of action or operation you want to perform. 
+** perform() this method in Actions Class is use to execute chain of action which are build using Action build method.
+
+build method actually creates a chain of action or operation which you want to perform.08:14 05-01-2022
+
+---------------------------------------------------------------------------------------------------------------------------------------
+
+19.Performing a mouse over of an element
